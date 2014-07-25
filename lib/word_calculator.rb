@@ -17,7 +17,7 @@ def word_calculator(string)
   j = input_keep[2]
   two = input_keep[3]
   k = input_keep[4]
-puts op
+puts two
   if op == "**" && two == "**"
     puts "HI"
     result = i.to_i**j.to_i**k.to_i
@@ -70,7 +70,7 @@ puts op
   elsif op == "-" && two == "/"
     result = j.to_i/k.to_i-i.to_i
 
-  elsif op == "+"
+  elsif op == "+" && two == ""
     result = i.to_i+j.to_i
 
   elsif op == "-"
@@ -89,13 +89,13 @@ puts op
     input_keep = input_keep.join("")
     i, op, j, two, k = input_keep.scan(/(\d+)([+\-*\/])(\d+)(?:([+\-*\/])(\d+))?/)[0]
     result = i.to_i.send op, j.to_i
-    result
+    puts "hi"
     result = result.to_i.send two, k.to_i
   end
 
 
 end
-puts word_calculator("What is 4 plus 2  ")
+puts word_calculator("What is 3 power 3")
 
 
 
